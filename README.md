@@ -8,13 +8,13 @@ The assignments are from [Advent of code 2025](https://adventofcode.com/2025)
 ### Part 1
 For this I implemented a simple counting approach. Nothing special really.
 ### Part 2
-I did not manage to get the counting approach to work so i decided on bruteforce. Not the cleanest, I know, but it still runs in under a second even in python.
+I did not manage to get the counting approach to work so i decided on brute-force. Not the cleanest, I know, but it still runs in under a second even in python.
 
 ## Day 2
 
 ### Part 1
 
-For this day I used a regex formula to find the repeating pattern. The regex establishes a group of however many digits and then references that group immediately using the `\<group num>` notation. I bashed my head against the wall as my code overcounted (it later turned out that it overcouned by millions of entries). After I realized that i was only supposed to include entries that were only a repeated sequence of characters and have no other chars the regex worked fine. So I had the regex developed and now i just needed the data to let it shread through. I decided the best approach was just to 'unwrap' the intervals into a huge text file (2259342 lines to be exact) and run the regex in line mode.
+For this day I used a regex formula to find the repeating pattern. The regex establishes a group of however many digits and then references that group immediately using the `\<group num>` notation. I bashed my head against the wall as my code over counted (it later turned out that it over counted by millions of entries). After I realized that i was only supposed to include entries that were only a repeated sequence of characters and have no other chars the regex worked fine. So I had the regex developed and now i just needed the data to let it shred through. I decided the best approach was just to 'unwrap' the intervals into a huge text file (2259342 lines to be exact) and run the regex in line mode.
 
 ### Part 2
 
@@ -32,4 +32,4 @@ so `1119012345` would find 9 as the largest and then search for the other max in
 
 ### Part 2
 
-This part required 12 numbers instead of 2, so I generalized the algorythm for all possible values. It still does the find max (excluding any spots too far to the right), cut the left side approach, it just did it in a loop and decreased the right exclusion zone.
+This part required 12 numbers instead of 2, so I generalized the algorithm for all possible values. It still does the find max (excluding any spots too far to the right), cut the left side approach, it just did it in a loop and decreased the right exclusion zone.
